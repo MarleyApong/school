@@ -1,0 +1,251 @@
+.NoName {
+   display: none;
+}
+
+.FormatA4 {
+   position: relative;
+   display: flex;
+   flex-wrap: wrap;
+   width: 100%;
+   height: 100%;
+   background: var(--color-1);
+   padding: .3rem;
+   gap: 1rem;
+   z-index: 250;
+
+   .CardSchool {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      padding: 0;
+      background: var(--color-1);
+      border-radius: 3px;
+      height: 208.2px;
+      width: 330px;
+      margin-top: .4px;
+      // width: 1004px;
+   }
+
+   .Motto {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      color: red;
+
+      small {
+         text-transform: uppercase;
+         font-size: 6px;
+         font-weight: 600;
+      }
+   }
+
+   .NameSchool {
+      text-align: center;
+      padding: 5px;
+      background: var(--school-color);
+      color: var(--color-1);
+      text-transform: uppercase;
+      font-size: 8px;
+   }
+
+   .LabelCard {
+      text-align: center;
+      color: var(--school-color);
+      font-size: 8px;
+   }
+
+   .MainContent {
+      position: relative;
+      display: flex;
+      gap: 20px;
+
+      .AllPicture {
+         position: relative;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         width: 30%;
+         margin-left: 5px;
+         overflow: hidden;
+
+         .PictureStudent {
+            position: relative;
+            display: flex;
+            width: 100px;
+            height: 120px;
+            z-index: 50;
+            // overflow: hidden;
+
+            &::before {
+               content: '';
+               position: absolute;
+               top: -2px;
+               right: -2px;
+               width: 50px;
+               height: 50px;
+               background: var(--school-color);
+               border-radius: 5px;
+               z-index: -1;
+            }
+
+            &::after {
+               content: '';
+               position: absolute;
+               bottom: -2px;
+               left: -2px;
+               width: 50px;
+               height: 50px;
+               background: var(--school-color);
+               border-radius: 5px;
+               z-index: -1;
+            }
+
+            img {
+               border: 2px solid var(--school-color);
+               border-radius: 5px;
+               width: 100%;
+               object-fit: cover;
+            }
+         }
+      }
+
+      .Signature {
+         position: absolute;
+         bottom: -35px;
+         left: 60px;
+         width: 100px;
+         height: 100px;
+         z-index: 100;
+
+         img {
+            width: 100%;
+            object-fit: cover;
+         }
+      }
+
+      .DetailsStudent {
+         width: 70%;
+         display: flex;
+         gap: 15px;
+
+         .LabelLine {
+            display: flex;
+            flex-direction: column;
+            color: var(--school-color);
+            font-weight: 600;
+
+            span {
+               text-transform: initial;
+               font-size: 7px;
+            }
+         }
+
+         .right {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            margin-top: 5px;
+
+            span {
+               text-transform: uppercase;
+               font-size: 9px;
+               font-weight: 600;
+            }
+         }
+
+         .rightAll {
+            gap: 5px !important;
+            gap: 6.5px !important;
+         }
+
+         .LogoEta {
+            position: absolute;
+            right: 10px;
+            bottom: 30px;
+            display: flex;
+            width: 70px;
+            height: 70px;
+            z-index: 100;
+
+            img {
+               width: 100%;
+               object-fit: cover;
+            }
+         }
+      }
+   }
+
+   .Footer {
+      background: var(--school-color);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 2px;
+
+      .Mama {
+         display: flex;
+         gap: 5px;
+
+         .Codebar {
+            display: flex;
+            align-items: center;
+         }
+      }
+
+      .Year {
+         display: flex;
+         align-items: center;
+         gap: 5px;
+
+         .LabelLine {
+            display: flex;
+            flex-direction: column;
+         }
+
+         span {
+            font-size: 7px;
+            color: var(--color-1);
+         }
+      }
+
+      .Year-Place {
+         position: absolute;
+         top: 150px;
+         right: 15px;
+         z-index: 100;
+
+         .LabelLine {
+            display: none;
+         }
+
+         span {
+            color: var(--color-6);
+         }
+      }
+
+   }
+}
+
+.PictureProf {
+   margin-bottom: 10px;
+}
+
+.DetailsProf {
+   display: flex;
+   align-items: center;
+
+   .LabelLine {
+      span {
+         font-size: 10px !important;
+      }
+   }
+
+   .ValueLine {
+      display: flex;
+      flex-direction: column;
+   }
+
+   .right {
+      gap: 20px !important;
+   }
+}

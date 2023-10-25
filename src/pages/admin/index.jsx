@@ -1,0 +1,8 @@
+export {default as LayoutAdmin} from './LayoutAdmin'
+export {default as Dashboard} from './Dashboard'
+export {default as Professeur} from './Professeur'
+export {default as Etudiant} from './Etudiant'
+export {default as PointageProfesseur} from './PointageProfesseur'
+export {default as PointageEtudiant} from './PointageEtudiant'
+export {default as Verification} from './Verification'
+export {default as Users} from './Users'

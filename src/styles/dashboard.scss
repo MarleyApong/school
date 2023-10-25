@@ -1,0 +1,217 @@
+.FirstGroup {
+   display: grid;
+   grid-template-columns: repeat(4, 1fr);
+   gap: 1rem;
+   margin-bottom: 1rem;
+
+   .TBox {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 120px;
+      padding: 1.5rem;
+      background: var(--color-2);
+      color: var(--color-4);
+      box-shadow: 5px 5px 5px #0000004d;
+      border-radius: 2px;
+
+      &:first-child {
+         background: var(--btn-color-hover);
+         color: var(--color-2);
+      }
+
+      .Element {
+         display: flex;
+         align-items: center;
+         justify-content: space-between;
+         font-size: 1.1rem;
+
+         .IconM {
+            position: absolute;
+            right: 1rem;
+            top: 2rem;
+            font-weight: 500;
+         }
+      }
+
+      .Length {
+         font-size: 1.5rem;
+      }
+   }
+}
+
+.SecondGroup {
+   display: grid;
+   grid-template-columns: repeat(2, 1fr);
+   gap: 1rem;
+
+   .Left {
+      width: 100%;
+      background: var(--color-2);
+      box-shadow: 5px 5px 5px #0000004d;
+      height: calc(100vh - 4rem - 120px - 3rem);
+      // overflow: hidden;
+
+      .HeaderLeft {
+         display: flex;
+         justify-content: space-between;
+         padding: 8px;
+         background: var(--primary-color);
+         color: var(--color-2);
+      }
+
+      .Details {
+         padding: 0 3px;
+      }
+   }
+
+   .Right {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+      width: 100%;
+      height: calc(100vh - 4rem - 120px - 3rem);
+
+      .TBox2 {
+         position: relative;
+         display: flex;
+         flex-direction: column;
+         justify-content: space-between;
+         height: 170px;
+         padding: 1.5rem;
+         background: var(--color-2);
+         color: var(--color-4);
+         box-shadow: 5px 5px 5px #0000004d;
+         border-radius: 2px;
+
+         &:nth-child(3) {
+            grid-row: span 2;
+            grid-column: span 2;
+            height: calc(170px * 2 - .5rem);
+            padding: 0;
+
+            .HeaderLeft {
+               display: flex;
+               justify-content: space-between;
+               padding: 8px;
+               background: var(--primary-color);
+               color: var(--color-2);
+            }
+
+            .Details {
+               height: calc(100vh - 4rem - 120px - 5.2rem);
+               padding: 0 3px;
+               overflow-y: scroll;
+            }
+         }
+
+         .Element {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-size: 1.1rem;
+
+            .It {
+               display: flex;
+               flex-direction: column;
+
+               span {
+                  &:last-child {
+                     font-weight: 600;
+                  }
+               }
+            }
+
+            i {
+               position: absolute;
+               right: 1rem;
+               top: 4rem;
+               font-weight: 500;
+               font-size: 4.5rem;
+            }
+         }
+
+         .Length {
+            font-size: 1.8rem;
+            display: flex;
+            flex-direction: column;
+            font-weight: 500;
+         }
+      }
+   }
+}
+
+// RESPONSIVE===========================================
+@media screen and (max-width: 1190px) {
+   .FirstGroup {
+      grid-template-columns: repeat(2, 1fr);
+
+   }
+
+   .SecondGroup {
+      grid-template-columns: repeat(1, 1fr);
+
+      .Right {
+         grid-template-columns: repeat(3, 1fr);
+         overflow: scroll;
+
+         .TBox2 {
+            &:nth-child(3) {
+               background: var(--primary-color);
+               color: var(--color-2);
+            }
+
+            &:nth-child(4) {
+               grid-row: span 1;
+               grid-column: span 3;
+               height: calc(170px * 2);
+               overflow: scroll !important;
+            }
+         }
+      }
+   }
+
+}
+
+@media screen and (max-width: 690px) {
+   .Left {
+      min-width: 100% !important;
+   }
+   .Right {
+      grid-template-columns: repeat(2, 1fr) !important;
+   }
+   .Details {
+      height: calc(100vh - 4rem - 120px - 5.2rem);
+      overflow-x: scroll;
+   }
+   .TBox2 {
+      &:nth-child(3) {
+         grid-column: span 2;
+      }
+      &:nth-child(4) {
+         grid-column: span 2 !important;
+      }
+   }
+}
+
+@media screen and (max-width: 470px) {
+   .Right {
+      grid-template-columns: repeat(1, 1fr) !important;
+   }
+   .TBox2 {
+      min-width: 100%;
+      &:nth-child(3) {
+         grid-column: span 1 !important;
+      }
+      &:nth-child(4) {
+         grid-column: span 1 !important;
+      }
+   }
+}
+
+@media screen and (max-width: 385px) {
+   .FirstGroup {
+      grid-template-columns: repeat(1, 1fr);
+   }
+}

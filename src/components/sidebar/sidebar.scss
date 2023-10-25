@@ -1,0 +1,130 @@
+.SideBar {
+   position: fixed;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   width: 245px;
+   height: 100%;
+   background: var(--aside-color);
+   box-shadow: 10px 10px 5px #0000004d;
+   transition: 1s;
+   z-index: 200;
+   // overflow-y: scroll !important;
+
+   &.OverSide {
+      transform: translateX(-250px);
+      transition: 1s;
+   }
+
+   .codeBar {
+      display: none;
+   }
+
+   .Atf {
+      text-align: center;
+      margin-top: 10.5px;
+      z-index: 100;
+
+      img {
+         width: 50%;
+      }
+   }
+
+   .LogoUserBox {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: var(--color-1);
+      margin-top: 10px;
+      margin-bottom: 20px;
+
+      .LogoUser {
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         width: 130px;
+         height: 130px;
+         margin-bottom: 15px;
+         border: 3px solid var(--color-5);
+         border-right-color: var(--color-1);
+         border-style: dashed;
+         border-radius: 50%;
+
+         .LogoBoxCircle {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            overflow: hidden;
+            display: flex;
+            z-index: 100;
+
+            img {
+               object-fit: cover;
+               width: 100%;
+            }
+         }
+      }
+   }
+
+   .AllItems {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      overflow-x: hidden;
+      overflow-y: scroll !important;
+
+      a {
+         color: var(--color-1);
+         text-decoration: none;
+         padding: 15px;
+         padding-left: 40px;
+         display: flex;
+         gap: 5px;
+         align-items: center;
+
+         &.LinkActive {
+            background: var(--color-1);
+            color: var(--color-4);
+            font-weight: 500;
+         }
+
+         &.LinkActive2 {
+            background: var(--color-2);
+            color: var(--color-4);
+            font-weight: 500;
+         }
+
+         &:not(a.LinkActive):hover {
+            background: var(--shadow-color);
+         }
+         
+         i {
+            margin-right: 20px;
+            font-size: 20px;
+         }
+      }
+
+      .sousMenu {
+         padding: 10px 5px;
+         margin: 0 50px;
+         background: var(--shadow-color);
+         color: var(--color-2);
+         width: 100%;
+
+         &:hover {
+            background: var(--color-6) !important;
+            color: var(--color-2);
+         }
+
+         i {
+            font-size: 16px;
+         }
+
+         span {
+            font-size: 12px;
+         }
+      }
+   }
+}

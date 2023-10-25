@@ -1,0 +1,147 @@
+.login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+
+    .container {
+        display: flex;
+        height: 70%;
+        width: 70%;
+        box-shadow: -5px -5px 20px #ababadbd, 5px 5px 20px #ababadbd, 5px -5px 20px #ababadbd, -5px 5px 20px #ababadbd;
+
+        .left {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 60%;
+            overflow: hidden;
+            background: var(--aside-color);
+            color: var(--color-1);
+            background-size: cover;
+            padding: 0 10px;
+            text-align: center;
+        }
+
+        .right {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 40%;
+            padding: 0 30px;
+
+            p {
+                font-size: 14px;
+
+                &:last-child {
+                    margin-top: 30px;
+                    text-align: center;
+                    font-weight: 500;
+                }
+            }
+
+            a {
+                color: var(--color-6);
+            }
+
+            .form {
+                img {
+                    margin: auto;
+                    width: 50%;
+                }
+
+                display: flex;
+                flex-direction: column;
+                height: auto;
+                gap: 15px;
+
+
+                h2,
+                p {
+                    text-align: center;
+                }
+
+                .input_box {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+
+                    input {
+                        padding: 15px;
+                        border-radius: 3px;
+                        border: 1px solid #00000027;
+                        outline: none;
+                        box-shadow: -5px 5px 5px #ababadbd;
+                    }
+
+                    button {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        gap: 10px;
+                        padding: 15px;
+                        border: none;
+                        outline: none;
+                        box-shadow: -5px 5px 5px #ababadbd;
+                        background: var(--primary-color);
+                        color: var(--color-1);
+                    }
+
+                    input:last-child {
+                        background: var(--btn-color);
+                        color: var(--color-1);
+                        font-weight: 600;
+                        transition: 1s;
+
+                        &:hover {
+                            background: var(--btn-color-hover);
+                            cursor: pointer;
+                            transition: 1s;
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+
+    // RESPONSIVE============================
+    @media screen and (max-width: 1282px) {
+        .container {
+            width: 85%;
+        }
+    }
+
+    @media screen and (max-width: 817px) {
+        .container {
+            flex-direction: column;
+            width: 55%;
+            height: 90%;
+
+            .left {
+                display: none;
+            }
+
+            .right {
+                height: 100%;
+                width: 100%;
+                padding: 20px;
+            }
+        }
+    }
+
+    @media screen and (max-width: 600px) {
+        .container {
+            min-width: 100%;
+            min-height: 100%;
+
+            .right {
+                padding: 20px;
+            }
+        }
+    }
+}

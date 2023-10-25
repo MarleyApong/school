@@ -1,0 +1,54 @@
+.Header {
+   position: fixed;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   width: calc(100% - 255px);
+   left: 255px;
+   height: 4rem;
+   background: var(--color-2);
+   box-shadow: 0px 5px 10px var(--shadow-color);
+   padding: 0 1rem;
+   font-weight: 500;
+   z-index: 100;
+   transition: 1s;
+}
+
+.Header.OverSide {
+   width: calc(100% - 0px);
+   left: 0;
+}
+
+.Header .Logo {
+   margin-right: 100px;
+}
+
+.Header i {
+   color: var(--btn-color);
+   font-size: 1.2rem;
+   font-weight: 700;
+}
+
+.Header span:last-child {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   height: 40px;
+   width: 40px;
+   background: var(--btn-color);
+   color: var(--color-1);
+   font-size: 16px;
+   border-radius: 2px;
+   cursor: pointer;
+}
+
+.Header span:last-child:hover {
+   background: var(--btn-color-hover);
+}
+
+@media screen and (max-width: 1000px) {
+   .Header {
+      width: calc(100% - 0px);
+      left: 0;
+   }
+}

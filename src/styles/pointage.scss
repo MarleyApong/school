@@ -1,0 +1,76 @@
+.Pt {
+   left: 15%;
+}
+
+table {
+   background: var(--color-2);
+   width: 100%;
+   border-collapse: collapse;
+
+   thead {
+      td {
+         color: var(--primary-color);
+         font-weight: 600;
+         padding: 8px;
+         text-align: center;
+      }
+   }
+
+   tbody {
+      tr {
+         border-top: 1px solid var(--shadow-color);
+         &:hover {
+            background: var(--shadow-color);
+            td {
+               color: var(--color-6);
+            }
+         }
+
+         td {
+            text-align: center;
+            padding: 8px;
+         }
+
+         a {
+            width: 100px;
+         }
+
+         .ELink {
+            cursor: pointer;
+            text-decoration: none;
+
+            &:hover {
+               padding: 5px 10px;
+               background: var(--color-4);
+
+               i {
+                  color: var(--color-1);
+               }
+            }
+         }
+      }
+   }
+
+}
+
+@media screen and (max-width: 1475px) {
+   .Pt {
+      left: 10%;
+      right: 10%;
+
+      .ModalDetails {
+         overflow-x: scroll;
+      }
+   }
+}
+
+@media screen and (max-width: 662px) {
+   .Pt {
+      left: 0;
+      right: 0;
+      min-width: 50%;
+   }
+   td {
+      min-width: 100px;
+   }
+}
